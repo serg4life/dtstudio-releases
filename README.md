@@ -93,6 +93,11 @@ of the tree.
 This repository carries distribution assets only — the application source lives
 elsewhere.
 
+`bindings.db` is built from the Linux kernel's own device tree bindings and
+sources, which keep their own licences (GPL-2.0 and dual GPL/MIT/BSD variants)
+and are not covered by the DTstudio licence agreement — see
+[NOTICE.md](NOTICE.md).
+
 ## Something broken?
 
 It is a beta: expect rough edges, and tell us what breaks. A device tree that
