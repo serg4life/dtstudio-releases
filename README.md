@@ -6,13 +6,13 @@
   <a href="https://github.com/serg4life/dtstudio-releases/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/serg4life/dtstudio-releases?include_prereleases&label=latest&color=6d5bff"></a>
   <img alt="Platform" src="https://img.shields.io/badge/platform-Linux%20x86__64-6d5bff">
   <img alt="Price" src="https://img.shields.io/badge/beta-free-6d5bff">
-  <a href="https://dtstudio-landing.netlify.app"><img alt="Website" src="https://img.shields.io/badge/website-dtstudio-6d5bff"></a>
+  <a href="https://dt-studio.dev"><img alt="Website" src="https://img.shields.io/badge/website-dtstudio-6d5bff"></a>
 </p>
 
 <p align="center">
   <a href="https://github.com/serg4life/dtstudio-releases/releases/latest/download/dtstudio_amd64.deb"><strong>⬇ Download for Linux (.deb)</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://dtstudio-landing.netlify.app">Official site</a>
+  <a href="https://dt-studio.dev">Official site</a>
 </p>
 
 ![The DTstudio editor: a device tree source with the problems list below and the node inspector on the right](assets/screenshot-editor.png)
@@ -104,4 +104,4 @@ It is a beta: expect rough edges, and tell us what breaks. A device tree that
 doesn't open, a check that fires when it shouldn't, a message that makes no
 sense — that is exactly what a beta is for.
 
-**[serg4life@duck.com](mailto:serg4life@duck.com)** · [dtstudio-landing.netlify.app](https://dtstudio-landing.netlify.app)
+**[serg4life@duck.com](mailto:serg4life@duck.com)** · [dt-studio.dev](https://dt-studio.dev)
