@@ -104,4 +104,4 @@ It is a beta: expect rough edges, and tell us what breaks. A device tree that
 doesn't open, a check that fires when it shouldn't, a message that makes no
 sense — that is exactly what a beta is for.
 
-**[serg4life@duck.com](mailto:serg4life@duck.com)** · [dt-studio.dev](https://dt-studio.dev)
+**[support@dt-studio.dev](mailto:support@dt-studio.dev)** · [dt-studio.dev](https://dt-studio.dev)
