@@ -94,9 +94,9 @@ This repository carries distribution assets only — the application source live
 elsewhere.
 
 `bindings.db` is built from the Linux kernel's own device tree bindings and
-sources, which keep their own licences (GPL-2.0 and dual GPL/MIT/BSD variants)
-and are not covered by the DTstudio licence agreement — see
-[NOTICE.md](NOTICE.md).
+sources, which keep their own licences (GPL-2.0 and dual GPL/MIT/BSD variants).
+The database itself — its compilation, schemas and index — is DTstudio's own
+work and is supplied for use with the application. See [NOTICE.md](NOTICE.md).
 
 ## Something broken?
 
