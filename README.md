@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/serg4life/dtstudio-releases/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/serg4life/dtstudio-releases?include_prereleases&label=latest&color=6d5bff"></a>
-  <img alt="Platform" src="https://img.shields.io/badge/platform-Linux%20x86__64-6d5bff">
+  <img alt="Platform" src="https://img.shields.io/badge/platform-Linux%20%C2%B7%20Windows-6d5bff">
   <img alt="Price" src="https://img.shields.io/badge/beta-free-6d5bff">
   <a href="https://dt-studio.dev"><img alt="Website" src="https://img.shields.io/badge/website-dtstudio-6d5bff"></a>
 </p>
@@ -12,12 +12,14 @@
 <p align="center">
   <a href="https://github.com/serg4life/dtstudio-releases/releases/latest/download/dtstudio_amd64.deb"><strong>⬇ Download for Linux (.deb)</strong></a>
   &nbsp;·&nbsp;
+  <a href="https://github.com/serg4life/dtstudio-releases/releases/latest/download/dtstudio-win64-setup.exe"><strong>⬇ Download for Windows (.exe)</strong></a>
+  &nbsp;·&nbsp;
   <a href="https://dt-studio.dev">Official site</a>
 </p>
 
 ![The DTstudio editor: a device tree source with the problems list below and the node inspector on the right](assets/screenshot-editor.png)
 
-DTstudio is a desktop app for Linux Device Trees. Open a `.dts`, see what every
+DTstudio is a desktop app for Linux Device Trees, and runs on Linux and Windows. Open a `.dts`, see what every
 node actually needs, fix what's wrong before it reaches the board, draw the tree
 as a graph, and build overlays — all checked live against the kernel's own
 bindings.
@@ -27,6 +29,8 @@ never leave your machine.
 
 ## Install
 
+### Linux (x86_64)
+
 ```bash
 wget https://github.com/serg4life/dtstudio-releases/releases/latest/download/dtstudio_amd64.deb
 sudo apt install ./dtstudio_amd64.deb
@@ -34,13 +38,26 @@ sudo apt install ./dtstudio_amd64.deb
 
 Then launch **DTstudio** from the applications menu, or run `dtstudio`.
 
-The bindings database (~80 MB) is downloaded on first run — no need to fetch it
-by hand.
-
 **Requirements:** a Debian or Ubuntu based distribution on x86_64, and
 `libxcb-cursor0` (pulled in by `apt`). `device-tree-compiler` and `cpp` come in
 as recommends and are what compiling and decompiling use; everything else works
 without them.
+
+### Windows (x64)
+
+Download and run
+[`dtstudio-win64-setup.exe`](https://github.com/serg4life/dtstudio-releases/releases/latest/download/dtstudio-win64-setup.exe).
+It installs per user, so it does not ask for administrator. The setup is
+unsigned, so SmartScreen warns the first time (More info → Run anyway).
+
+**Requirements:** Windows 10 1803 or later, x64. Windows has no package manager
+to bring in `dtc` and a preprocessor the way `apt` does, so the installer offers
+them as an optional **Compilation tools** component and fetches them from
+[tools-v1](https://github.com/serg4life/dtstudio-releases/releases/tag/tools-v1).
+Skip it and everything except compiling and decompiling still works.
+
+The bindings database (~80 MB) is downloaded on first run on both platforms — no
+need to fetch it by hand.
 
 ## What you can do with it
 
@@ -87,11 +104,15 @@ of the tree.
 | Asset | What it is |
 |---|---|
 | `dtstudio_amd64.deb` | The Linux package. The name carries no version, so `releases/latest/download/dtstudio_amd64.deb` always points at the current build. |
+| `dtstudio-win64-setup.exe` | The Windows installer. Versionless for the same reason. |
 | `bindings.db` | The device-tree bindings database, built from the kernel YAML bindings. |
 | `manifest.json` | Version, URL, `sha256` and size of `bindings.db`. DTstudio reads it to fetch and verify the database. |
 
 This repository carries distribution assets only — the application source lives
-elsewhere.
+elsewhere. The [tools-v1](https://github.com/serg4life/dtstudio-releases/releases/tag/tools-v1)
+tag is separate and pinned: it holds `dtc` and the preprocessor that the Windows
+installer downloads, with their licences and the `dtc` source. The installer
+bakes in each `sha256`, so that tag must not move.
 
 `bindings.db` is built from the Linux kernel's own device tree bindings and
 sources, which keep their own licences (GPL-2.0 and dual GPL/MIT/BSD variants).
